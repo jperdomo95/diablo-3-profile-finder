@@ -1,12 +1,15 @@
 <template>
   <div>
     <base-loading v-if="isLoading"/>
-    <h1>Profile View</h1>
+    <template v-if="profileData !== null">
+      <main-block :profile-data="profileData"/>
+    </template>
   </div>
 </template>
 
 <script>
 import BaseLoading from '@/components/BaseLoading'
+import MainBlock from './MainBlock/Index'
 import { getApiAccount } from '@/api/search'
 import setError from '@/mixins/setError'
 
@@ -15,7 +18,7 @@ export default {
   mixins: [
     setError
   ],
-  components: { BaseLoading },
+  components: { BaseLoading, MainBlock },
   data () {
     return {
       isLoading: false,

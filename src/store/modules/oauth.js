@@ -18,6 +18,7 @@ const actions = {
     // 3 - Si hay error, limpiar el token de 'accessToken', mostrar log del error
 
     // Paso 1
+    commit('loading/SET_LOADING', true, { root: true })
     oauth.getToken()
       .then(({ data }) => {
         // Paso 2: Guardar valor del token llamando a la mutación
@@ -30,7 +31,7 @@ const actions = {
       })
       .finally(() => {
         // Listo
-        console.log('Done!')
+        commit('loading/SET_LOADING', false, { root: true })
       })
   }
 }

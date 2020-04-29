@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Hero List</h1>
+  <div class="heroes-list border-top border-secondary mt-5 pt-5">
     <b-table
       hover
       stripped

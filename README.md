@@ -1,5 +1,6 @@
 # diablo3
-
+## Disclaimer
+This project belongs to PLATZI the original repository link is https://github.com/baumannzone/diablo3-vue-platzi
 ## Project setup
 ```
 yarn install

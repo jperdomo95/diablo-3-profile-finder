@@ -9,6 +9,8 @@
         <!-- En 'lg' orden 2 -->
         <b-col md="12" lg="8" order-lg="2">
           <base-loading v-if="isLoadingItems"/>
+          <!-- Componente de Items del personaje -->
+          <hero-items v-if="items" :items="items"/>
         </b-col>
 
         <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
@@ -17,7 +19,6 @@
           <template v-if="hero">
             <hero-attributes :attributes="detailStats"/>
             <hero-skills :skills="hero.skills"/>
-            <hero-items/>
           </template>
         </b-col>
       </b-row>
